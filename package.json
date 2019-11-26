@@ -1,13 +1,13 @@
 {
   "name": "node-red-contrib-eksido-salesforcemarketingcloud",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Salesforce Marketing Cloud Node",
   "repository": {
     "type": "git",
     "url": "https://github.com/eksido/node-red-contrib-eksido-salesforcemarketingcloud"
   },
   "dependencies": {
-    "fuelsdk-node": "^1.1.8"
+    "sfmc-fuelsdk-node": "^2.4.0"
   },
   "keywords": [
     "node-red",

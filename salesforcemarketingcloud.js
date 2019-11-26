@@ -1,4 +1,5 @@
 module.exports = function(RED) {
+
   function SalesforceMarketingCloudConfig(n) {
     RED.nodes.createNode(this,n);
     this.name = n.name;
@@ -6,6 +7,7 @@ module.exports = function(RED) {
     this.clientSecret = n.clientSecret;
     this.stack = n.stack;
   }
+
   RED.nodes.registerType(
     "salesforcemarketingcloud", 
     SalesforceMarketingCloudConfig,
@@ -16,5 +18,5 @@ module.exports = function(RED) {
         stack: {type: "text"}
       }
     }
-  );
+  )
 }

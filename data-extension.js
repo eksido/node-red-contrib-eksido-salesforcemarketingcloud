@@ -1,5 +1,5 @@
 module.exports = function(RED) {
-  var ET_Client = require('fuelsdk-node');
+  const ET_Client = require('sfmc-fuelsdk-node')
 
   function DataExtension(config) {
     RED.nodes.createNode(this,config);
