@@ -7,7 +7,9 @@
     credentials: {
       clientId: {type: "text", required: true},
       clientSecret: {type: "password", required: true},
-      stack: {type: "text"}
+      authenticationBaseURI: {type: "text", required: true},
+      RESTBaseURI: {type: "text", required: true}, 
+      SOAPBaseURI: {type: "text", required: true} 
     },
     label: function() {
       return this.name || "salesforcemarketingcloud";
@@ -29,15 +31,15 @@
     <input type="password" id="node-config-input-clientSecret" placeholder="Client Secret">
   </div>
   <div class="form-row">
-    <label for="node-config-input-stack"><i class="fa fa-wrench" placeholder="Stack"></i> Stack</label>
-    <select id="node-config-input-stack">
-      <option value="">s1</option>
-      <option value="s4">s4</option>
-      <option value="s6">s6</option>
-      <option value="s7">s7</option>
-      <option value="s8">s8</option>
-      <option value="s10">s10</option>
-      <option value="s50">s50</option>
-    </select>
+    <label for="node-config-input-authenticationBaseURI"><i class="fa fa-key"></i>Authentication Base URI</label>
+    <input type="text" id="node-config-input-authenticationBaseURI" placeholder="Authentication Base URI">
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-RESTBaseURI"><i class="fa fa-key"></i>REST Base URI</label>
+    <input type="text" id="node-config-input-RESTBaseURI" placeholder="REST Base URI">
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-SOAPBaseURI"><i class="fa fa-key"></i>SOAP Base URI</label>
+    <input type="text" id="node-config-input-clientId" placeholder="SOAPBaseURI">
   </div>
 </script>
