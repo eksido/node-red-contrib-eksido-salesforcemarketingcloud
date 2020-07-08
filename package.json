@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-eksido-salesforcemarketingcloud",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Salesforce Marketing Cloud Node - Integrate all with Salesforce Marketing Cloud. Forget all other installation tools. Node-red and Salesforce Marketing Cloud and you have all",
   "repository": {
     "type": "git",
@@ -19,13 +19,14 @@
   ],
   "node-red": {
     "nodes": {
-      "data-extension": "data-extension.js",
-      "subscriber": "subscriber.js",
-      "triggered-send": "triggered-send.js",
-      "mobile-push": "mobile-push.js",
-      "journeybuilder": "journeybuilder.js",
-      "salesforcemarketingcloud": "salesforcemarketingcloud.js"
+      "salesforcemarketingcloud": "salesforcemarketingcloud.js",
+      "contacts": "contacts.js"
     }
   },
-  "author": "Franz Malten Buemann <fmb@eksido.com> (https://eksido.com)"
+  "author": "Franz Malten Buemann <fmb@eksido.com> (https://eksido.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://eksido.atlassian.net/servicedesk/customer/portals"
+  },
+  "homepage": "https://eksido.com"
 }

@@ -7,12 +7,10 @@
     credentials: {
       clientId: {type: "text", required: true},
       clientSecret: {type: "password", required: true},
-      authenticationBaseURI: {type: "text", required: true},
-      RESTBaseURI: {type: "text", required: true}, 
-      SOAPBaseURI: {type: "text", required: true} 
+      tenant: {type: "text", required: true}
     },
     label: function() {
-      return this.name || "salesforcemarketingcloud";
+      return this.name || "Salesforce Marketing Cloud";
     }
   });
 </script>
@@ -31,15 +29,7 @@
     <input type="password" id="node-config-input-clientSecret" placeholder="Client Secret">
   </div>
   <div class="form-row">
-    <label for="node-config-input-authenticationBaseURI"><i class="fa fa-key"></i>Authentication Base URI</label>
-    <input type="text" id="node-config-input-authenticationBaseURI" placeholder="Authentication Base URI">
-  </div>
-  <div class="form-row">
-    <label for="node-config-input-RESTBaseURI"><i class="fa fa-key"></i>REST Base URI</label>
-    <input type="text" id="node-config-input-RESTBaseURI" placeholder="REST Base URI">
-  </div>
-  <div class="form-row">
-    <label for="node-config-input-SOAPBaseURI"><i class="fa fa-key"></i>SOAP Base URI</label>
-    <input type="text" id="node-config-input-clientId" placeholder="SOAPBaseURI">
+    <label for="node-config-input-tenant"><i class="fa fa-wrench" placeholder="tenant"></i> Tenant</label>
+    <input type="text" id="node-config-input-tenant" placeholder="tenant">
   </div>
 </script>
