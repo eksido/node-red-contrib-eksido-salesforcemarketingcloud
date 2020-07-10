@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-eksido-salesforcemarketingcloud",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Salesforce Marketing Cloud Node - Integrate all with Salesforce Marketing Cloud. Forget all other installation tools. Node-red and Salesforce Marketing Cloud and you have all",
   "repository": {
     "type": "git",

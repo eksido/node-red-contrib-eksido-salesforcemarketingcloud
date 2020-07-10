@@ -1,7 +1,7 @@
 <script type="text/javascript">
-    RED.nodes.registerType("getContacts", {
-      category: "Marketing Cloud",
-      color: "#E98300",
+    RED.nodes.registerType("Contacts", {
+      category: "Salesforce",
+      color: "#000000",
       defaults: {
         name: { value: "" },
         sfmcConfig: { value: "", type: "sfmc", required: true },
@@ -13,7 +13,7 @@
       icon: "envelope.png",
       outputLabels: ["msg", "values", "error"],
       label: function() {
-        return this.name || "Get Contact(s)";
+        return this.name || "Contacts";
       },
       oneditprepare: function() {
         $("#node-input-filter").typedInput({
@@ -25,9 +25,9 @@
     });
   </script>
   
-  <script type="text/x-red" data-template-name="getContacts">
+  <script type="text/x-red" data-template-name="Contacts">
       <div class="form-row">
-        <label for="node-input-sfmcConfig"><i class="fa fa-cog"></i> Application</label>
+        <label for="node-input-sfmcConfig"><i class="fa fa-cog"></i>Application</label>
         <input type="text" id="node-input-sfmcConfig" >
       </div>
       <div class="form-row">

@@ -47,5 +47,5 @@ module.exports = function(RED) {
             }
         });
     }
-    RED.nodes.registerType('getContacts', getContacts);
+    RED.nodes.registerType('Contacts', getContacts);
 };

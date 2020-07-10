@@ -7,7 +7,7 @@ module.exports = function(RED) {
       this.tenant = n.tenant;
   }
   RED.nodes.registerType(
-      'sfmc',
+      'salesforcemarketingcloud',
       MarketingCloudConfig,
       {
           credentials: {
