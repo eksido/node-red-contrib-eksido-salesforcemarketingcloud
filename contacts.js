@@ -9,9 +9,7 @@ module.exports = function(RED) {
         RED.nodes.createNode(this, config);
         let sfmcConfig = RED.nodes.getNode(config.sfmcConfig);
         let node = this;
-        const restEndpoint = `https://${
-            sfmcConfig.credentials.tenant
-        }.rest.marketingcloudapis.com`;
+        const restEndpoint = sfmcConfig.restbaseurl;
         let restClient = new SFMCRestClient({
             auth: {
                 // options you want passed when Fuel Auth is initialized
@@ -47,5 +45,5 @@ module.exports = function(RED) {
             }
         });
     }
-    RED.nodes.registerType('Contacts', getContacts);
+    RED.nodes.registerType('marketingcloud-contacts', getContacts);
 };
