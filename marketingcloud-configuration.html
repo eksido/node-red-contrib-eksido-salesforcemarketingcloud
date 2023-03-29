@@ -2,36 +2,35 @@
     RED.nodes.registerType('marketingcloud-configuration',{
         category: 'config',
         defaults: {
-            clientid: {value:"clientid",required:true},
-            clientsecret: {value:"clientsecret",required:true},
-            authenticationurl: {value:"authenticationurl",required:true},
-            restbaseurl: {value:"restbaseurl",required:true},
-            soapbaseurl: {value:"soapbaseurl",required:true},
+            clientid: {value:"",required:true},
+            clientsecret: {value:"",required:true},
+            authenticationurl: {value:"",required:true},
+            restbaseurl: {value:"",required:true},
+            soapbaseurl: {value:"",required:true},
         },
         label: function() {
-            return 'SFMC' + restbaseurl;
+            return 'SFMC: ' + this.restbaseurl;
         }
     });
 </script>
 <script type="text/html" data-template-name="marketingcloud-configuration">
-    <div class="form-row">
-        <label for="node-config-input-clientid"><i class="fa fa-bookmark"></i> Client Id</label>
-        <input type="text" id="node-config-input-clientid">
-    </div>
-    <div class="form-row">
-        <label for="node-config-input-clientsecret"><i class="fa fa-bookmark"></i>Client Secret</label>
-        <input type="text" id="node-config-input-clientsecret">
-    </div>
-    <div class="form-row">
-        <label for="node-config-input-authenticationurl"><i class="fa fa-bookmark"></i>Authentication Base URI</label>
-        <input type="text" id="node-config-input-authenticationurl">
-    </div>
-    <div class="form-row">
-        <label for="node-config-input-restbaseurl"><i class="fa fa-bookmark"></i>REST Base URI </label>
-        <input type="text" id="node-config-input-restbaseurl">
-    </div>
-    <div class="form-row">
-        <label for="node-config-input-soapbaseurl"><i class="fa fa-bookmark"></i>SOAP Base URI </label>
-        <input type="text" id="node-config-input-soapbaseurl">
-    </div>
+    <input type="text" id="node-config-input-clientid" placeholder="Client ID">
+    <input type="text" id="node-config-input-clientsecret" placeholder="Client Secret">
+    <input type="text" id="node-config-input-authenticationurl" placeholder="https://YOUR_SUBDOMAIN.auth.marketingcloudapis.com">
+    <input type="text" id="node-config-input-restbaseurl" placeholder="https://YOUR_SUBDOMAIN.rest.marketingcloudapis.com">
+    <input type="text" id="node-config-input-soapbaseurl" placeholder="https://YOUR_SUBDOMAIN.soap.marketingcloudapis.com">    
 </script>
+<script type="text/html" data-help-name="marketingcloud-configuration">
+    <p>This configuration node allows you to set up the API credentials for Salesforce Marketing Cloud. You can either provide the credentials directly in the input fields or use environment variables as default values.</p>
+    <p>When environment variables are set, the following will be used as default values if the input fields are left empty:</p>
+    <ul>
+        <li>Client ID: <code>MARKETINGCLOUD_CLIENT_ID</code></li>
+        <li>Client Secret: <code>MARKETINGCLOUD_CLIENT_SECRET</code></li>
+        <li>Authentication Base URI:
+            <code>MARKETINGCLOUD_AUTHENTICATION_URL</code></li>
+        <li>REST Base URI: <code>MARKETINGCLOUD_RESTBASE_URL</code></li>
+        <li>SOAP Base URI: <code>MARKETINGCLOUD_SOAPBASE_URL</code></li>
+    </ul>
+    <p>By using environment variables, you can securely store your Salesforce Marketing Cloud credentials without exposing them in the Node-RED editor. However, you can still override the environment variable values by entering the credentials directly into the input fields.</p>
+</script>
+        
