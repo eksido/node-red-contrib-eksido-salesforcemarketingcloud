@@ -12,12 +12,11 @@ module.exports = function(RED) {
         const restEndpoint = sfmcConfig.restbaseurl;
         let restClient = new SFMCRestClient({
             auth: {
-                // options you want passed when Fuel Auth is initialized
-                clientId: sfmcConfig.credentials.clientId,
-                clientSecret: sfmcConfig.credentials.clientSecret
+                clientId: sfmcConfig.clientid,
+                clientSecret: sfmcConfig.clientsecret
             },
             restEndpoint: restEndpoint
-        });
+        });        
         this.on('input', function(msg) {
             try {
                 const payload = new initGetContact(msg[config.filter]);
